@@ -7,6 +7,11 @@ Prophet uses an older toolchain, please ensure that the following packages are i
 
 ## Build Process
 The build process for Prophet has been consolidated into `build_prophet.bash`, which performs the following:
+1. Run the docker file to create a image of Ubuntu 14.02 and GCC-4.8.0
+2. cd into prophet-test
+3. Run the bash file, build_prophet.bash
+
+## What the bash file does
 1. Installs and builds prerequisites (LLVM+CLANG==3.6.2)
    - Applies patches to these to modernize LLVM images for GNU Binutils version is >=2.25, assuming GCC 4.8 install path `/usr/lib/gcc/x86_64-linux-gnu/4.8/`
    - Any change to GCC installation or paths will need to amend prophet/llvm/patches.tgz content
@@ -32,5 +37,3 @@ Because the build process was not changed, w/a was implemented that dynamically 
 These libpaths need to be managed in the compile scripts - example scripts expect this path:
 64b Prophet @ prophet-gpl/  
 32b Prophet @ prophet-gpl/32/  
-
-
