@@ -6,9 +6,10 @@ Prophet uses an older toolchain, please ensure that the following packages are i
 1. GCC multilib <= 5.0
 
 ## Build Process
-1. Run the docker file to create a image of Ubuntu 14.02 and GCC-4.8.0
-2. cd into prophet-test
-3. Run the bash file, build_prophet.bash
+1. Clone this repo into a directory of your choosing
+2. Run the docker file to create a image of Ubuntu 14.02 and GCC-4.8.0
+3. cd into prophet-test
+4. Run the bash file, build_prophet.bash
 
 ## What the bash file does
 The build process for Prophet has been consolidated into `build_prophet.bash`, which performs the following:
